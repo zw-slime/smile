@@ -1,0 +1,18 @@
+
+<ul class="posts">
+    <% if (site.posts.length){ %>
+        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+            <li>
+                <article>
+                    <header>
+                        <h3><a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a></h3>
+                        <time class="published" datetime="2015-10-20"><%= post.date %></time>
+                    </header>
+                    <a href="<%- url_for(post.path) %>" class="image"><img src="<%- url_for('/images/avatar.jpg') %>" alt="" /></a>
+                </article>
+            </li>
+        <% }) %>
+    <% } %>
+
+
+</ul>

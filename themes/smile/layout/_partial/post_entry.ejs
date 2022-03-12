@@ -1,0 +1,39 @@
+<article class="post">
+    <header>
+        <div class="title">
+            <h2><a href="single.html"><%- post.title %></a></h2>
+            <p><%- post.description %></p>
+        </div>
+        <div class="meta">
+            <time class="published" datetime="<%= date_xml(post.date) %>"><%- post.date.format("YYYY-MM-DD") %></time>
+            <a class="author"><span class="name"><%- post.author %></span><img src="<%- url_for('/images/avatar.jpg') %>" alt="" /></a>
+        </div>
+    </header>
+    <a href="<%- config.root %><%- post.path %>" class="image featured"><img src="<%- url_for(post.cover) %>" alt="" /></a>
+    <p><%- post.snapshot %></p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="<%- config.root %><%- post.path %>" class="button large">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+            <li><a href="#">  <%- list_categories(post.categories, {
+                        show_count: false,
+                        style: 'none',
+                        separator: ','
+                    }) %></a></li>
+            <li>
+                <% if (post.tags && post.tags.length){ %>
+                    <%- list_tags(post.tags, {
+                        show_count: false,
+                        class: 'tag',
+                        style:'li'
+                    }) %>
+                <% } %>
+            </li>
+
+<!--            <li><a href="#" class="icon solid fa-heart">28</a></li>-->
+<!--            <li><a href="#" class="icon solid fa-comment">128</a></li>-->
+        </ul>
+    </footer>
+</article>

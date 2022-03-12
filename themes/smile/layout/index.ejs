@@ -1,0 +1,16 @@
+<div id="main">
+
+    <% site.posts.sort("date", "desc").each(function(post){ %>
+        <%- partial("_partial/post_entry", {post: post}) %>
+    <% }) %>
+
+    <!-- Pagination -->
+    <ul class="actions pagination">
+        <li><a href="" class="disabled button large previous">Previous Page</a></li>
+        <li><a href="" class="button large next">Next Page</a></li>
+    </ul>
+
+
+</div>
+<!-- Sidebar -->
+<%- partial("_partial/sidebar") %>

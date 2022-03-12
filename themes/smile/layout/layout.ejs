@@ -1,0 +1,27 @@
+<head>
+    <title>Smile Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="<%- url_for('/css/main.css') %>" />
+</head>
+
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <%- partial("_partial/header") %>
+
+    <!-- Main -->
+    <%- body %>
+</div>
+
+<!-- Scripts -->
+<script src="<%- url_for('/js/jquery.min.js') %>"></script>
+<script src="<%- url_for('/js/browser.min.js') %>"></script>
+<script src="<%- url_for('/js/breakpoints.min.js') %>"></script>
+<script src="<%- url_for('/js/util.js') %>"></script>
+<script src="<%- url_for('/js/main.js') %>"></script>
+
+</body>

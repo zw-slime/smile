@@ -1,0 +1,48 @@
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Post -->
+        <article class="post">
+            <header>
+                <div class="title">
+                    <h2><a href="#"><%- post.title%></a></h2>
+                    <p><%- post.description%></p>
+                </div>
+                <div class="meta">
+                    <time class="published" datetime="2015-11-01"><%- post.date %></time>
+                    <a href="#" class="author"><span class="name"><%- post.author%></span><img src="<%- url_for('images/avatar.jpg')%>" alt="" /></a>
+                </div>
+            </header>
+            <span class="image featured"><img src="<%- url_for(post.cover)%>" alt="" /></span>
+            <%- post.content %>
+            <footer>
+                <ul class="stats">
+                    <li><a href="#">  <%- list_categories(post.categories, {
+                                show_count: false,
+                                style: 'none',
+                                separator: ','
+                            }) %></a></li>
+                    <li>
+                        <% if (post.tags && post.tags.length){ %>
+                            <%- list_tags(post.tags, {
+                                show_count: false,
+                                class: 'tag',
+                                style:'li'
+                            }) %>
+                        <% } %>
+                    </li>
+
+                    <!--            <li><a href="#" class="icon solid fa-heart">28</a></li>-->
+                    <!--            <li><a href="#" class="icon solid fa-comment">128</a></li>-->
+                </ul>
+            </footer>
+        </article>
+        <!-- Footer -->
+        <section id="footer">
+            <p class="copyright">&copy; Zhang wei Blog: <a href="https://github.com/zw-slime">My github </a></p>
+        </section>
+    </div>
+
+
+

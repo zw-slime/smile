@@ -1,0 +1,39 @@
+<section id="sidebar">
+
+    <!-- Intro -->
+    <section id="intro">
+        <a href="#" class="logo"><img src="<%= url_for('/images/logo.jpg') %>" alt="" /></a>
+        <header>
+            <h2>Smile Blog</h2>
+            <p>Lerna more about me <a href="https://github.com/zw-slime">My github </a></p>
+        </header>
+    </section>
+
+    <!-- Mini Posts -->
+    <section>
+        <div class="mini-posts">
+            <%- partial("_partial/recent_posts") %>
+
+        </div>
+    </section>
+
+    <!-- Posts List -->
+    <section>
+        <%- partial("_partial/more_posts") %>
+    </section>
+
+    <!-- About -->
+    <section class="blurb">
+        <h2>About</h2>
+        <p>一个努力奋斗的渣渣程序员</p>
+        <ul class="actions">
+            <li><a href="#" class="button">Learn More</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <p class="copyright">&copy; Smile Blog</p>
+    </section>
+
+</section>
