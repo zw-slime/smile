@@ -3172,7 +3172,7 @@ input, select, textarea {
 			padding-left: 1.5em;
 		}
 
-#header .links-list {
+#header .links-list,#header .links1-list {
 	display: flex;
 	height: 100%;
 	align-items: center;
@@ -3627,5 +3627,9 @@ input, select, textarea {
 }
 .tag-li-link:hover {
 	border:1px solid #2ebaae;
+	color: #2ebaae !important;
+}
+
+#header .links1-list  {
 	color: #2ebaae !important;
 }

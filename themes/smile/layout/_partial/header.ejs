@@ -1,13 +1,14 @@
 <header id="header">
-    <h1><a href="/">Smile Blog</a></h1>
+    <h1><a href="/">Wei Blog</a></h1>
     <nav class="links">
             <% if (site.categories.length){ %>
                 <%- list_categories({show_count: true,
-                    class: 'links',
+                    class: is_category(page.category) ? 'links1' :'links',
                     style: 'list',
                     depth: 2,
                     separator: ''}) %>
             <% } %>
+
     </nav>
     <nav class="main">
         <ul>
