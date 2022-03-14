@@ -1,0 +1,25 @@
+<div id="main">
+    <% var last; %>
+    <% site.posts.each(function(post){ %>
+        <% var day = date(post.date, 'DD'), month = date(post.date, 'YYYY MMMM') %>
+        <% if(!last){ %>
+            <%  last = month; %>
+        <article class="archives-group">
+            <time datetime="<%= date(post.date, 'YYYY-MM') %>" class="archives-data"><%= last %></time>
+            <ul class="archives-list">
+                <li><a href="<%- url_for(post.path) %>"><%= post.title %></a></li>
+                <% } else if (last == month) { %>
+                    <li><a href="<%- url_for(post.path) %>"><%= post.title %></a></li>
+                <% } else { %>
+                    <%  last = month; %>
+            </ul>
+        </article>
+    <article class="archives-group">
+        <time datetime="<%= date(post.date, 'YYYY-MM') %>" class="archives-data"><%= last %></time>
+        <ul class="archives-list">
+            <li><a href="<%- url_for(post.path) %>"><%= post.title %></a></li>
+
+            <% } %>
+            <% }) %>
+        </ul></article>
+</div>

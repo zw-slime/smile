@@ -3,6 +3,7 @@ title: Hello World
 author: zhangwei
 description: this is a test
 cover: images/pic01.jpg
+date: 2021-2-1
 categories: 
   - 其他
 tags: 

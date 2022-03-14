@@ -3637,3 +3637,28 @@ input, select, textarea {
 #header .number {
 	font-weight: bold;
 }
+
+.archives-group {
+	position: relative;
+	margin-left: 100px;
+}
+.archives-data {
+	position: absolute;
+	left: -100px;
+}
+.archives-list {
+	list-style: none;
+	border-left:1px solid #ddd;
+	margin: 0;
+	padding-bottom: 2em;
+}
+.archives-list li {
+	margin-bottom: 2em;
+}
+#header .main ul li.right-menu > a {
+	color: #646464;
+	text-indent: 0;
+	font-size: 0.7em;
+	font-weight: 400;
+	text-align: center;
+}
