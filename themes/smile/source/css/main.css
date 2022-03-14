@@ -3172,7 +3172,7 @@ input, select, textarea {
 			padding-left: 1.5em;
 		}
 
-#header .links-list,#header .links1-list {
+#header .links-list {
 	display: flex;
 	height: 100%;
 	align-items: center;
@@ -3630,6 +3630,10 @@ input, select, textarea {
 	color: #2ebaae !important;
 }
 
-#header .links1-list  {
+#header .links-list .active {
 	color: #2ebaae !important;
+}
+
+#header .number {
+	font-weight: bold;
 }

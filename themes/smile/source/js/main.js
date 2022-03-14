@@ -174,5 +174,6 @@
 				});
 			}
 
+			console.warn($window.hexo)
 })(jQuery);
 

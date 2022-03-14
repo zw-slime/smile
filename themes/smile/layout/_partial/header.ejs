@@ -1,15 +1,17 @@
 <header id="header">
-    <h1><a href="/">Wei Blog</a></h1>
+    <h1><a href="<%- url_for()%>">Wei Blog</a></h1>
     <nav class="links">
-            <% if (site.categories.length){ %>
-                <%- list_categories({show_count: true,
-                    class: is_category(page.category) ? 'links1' :'links',
-                    style: 'list',
-                    depth: 2,
-                    separator: ''}) %>
-            <% } %>
-
+      <ul class="links-list">
+          <% site.categories.data.map(function(category){ %>
+              <li class="<%= page.category == category.name  ? 'active' :'' %>">
+                  <a href="<%= url_for(category.path)%>">
+                      <%=category.name%> <span class="number"><%= category.length%></span>
+                  </a>
+              </li>
+          <% }) %>
+      </ul>
     </nav>
+
     <nav class="main">
         <ul>
 <!--            <li class="search">-->

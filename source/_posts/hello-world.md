@@ -2,9 +2,9 @@
 title: Hello World
 author: zhangwei
 description: this is a test
-snapshot: this is a test snapshot
 cover: images/pic01.jpg
-categories: 其他
+categories: 
+  - 其他
 tags: 
   - PS3
   - Games
