@@ -1,0 +1,13 @@
+<div id="main" class='tag'>
+
+    <h1><%- page.tag %></h1>
+    <ul>
+        <% page.posts.each(function(post){ %>
+            <li class="item">
+                <span class="time"><%= date(post.date, 'YYYY-MM-DD') %></span>
+                <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                <span class="desc"><%= post.description %></span>
+            </li>
+        <% }) %>
+    </ul>
+</div>

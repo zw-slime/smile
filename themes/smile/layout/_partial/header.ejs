@@ -20,7 +20,8 @@
 <!--                    <input type="text" name="query" placeholder="Search" />-->
 <!--                </form>-->
 <!--            </li>-->
-            <li class="right-menu"><a href="">归档</a></li>
+            <li class="<%=is_archive()?'menu active':'menu'%>"><a href="<%=url_for('archives')%>" class="fa-archive">归档</a></li>
+            <li class="<%=is_current('tags')?'menu active':'menu'%>"><a href="<%=url_for('tags')%>" class="fa-tag">标签</a></li>
             <li class="menu">
                 <a class="fa-search" href="#menu">Search</a>
             </li>

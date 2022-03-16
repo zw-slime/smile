@@ -1,1 +1,10 @@
+<% if(is_post()) {%>
 <%- partial("_partial/article", {post: page, index: false}) %>
+<% } else if(is_current('tags')) {%>
+<%- partial("_partial/tags") %>
+<% } else {%>
+    <%- partial("_partial/about") %>
+<%}%>
+
+
+

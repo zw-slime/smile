@@ -121,3 +121,10 @@ deploy:
 search:
   path: search.json
   field: post
+
+menu:
+  home: /
+  categories: /categories
+  archives: /archives
+  tags: /tags
+  about: /about
