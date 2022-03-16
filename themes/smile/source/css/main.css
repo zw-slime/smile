@@ -2864,7 +2864,7 @@ input, select, textarea {
 					}
 
 						.post > footer .stats li .icon:before {
-							color: rgba(160, 160, 160, 0.3);
+							color: #646464;
 							margin-right: 0.75em;
 						}
 
