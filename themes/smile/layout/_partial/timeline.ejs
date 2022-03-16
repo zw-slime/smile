@@ -1,18 +1,22 @@
 <div id="main" class="time-line">
     <% var lastMonth; var lastYear;%>
     <% site.posts.sort('date',-1).each(function(post){ %>
-        <% var year = date(post.date, 'YYYY'), month = date(post.date, 'MMMM') %>
+        <% var year = date(post.date, 'YYYY'), month = date(post.date, 'M') %>
         <% if(lastYear !== year){ %>
-            <div class="year"><%- year%></div>
-            <div class="month"><%- month%></div>
+            <div class="year"><%- year%>年</div>
+            <div class="month"><%- month%>月</div>
         <%}%>
         <% if(lastYear === year && lastMonth !== month){ %>
-            <div class="month"><%- month%></div>
+            <div class="month"><%- month%>月</div>
         <%}%>
         <div class="item">
-            <span class="time"><%= date(post.date, 'YYYY-MM-DD') %></span>
-            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
-            <span class="desc"><%= post.description %></span>
+            <div>
+                <div>
+                    <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                </div>
+                <div class="desc"><%= post.description %></div>
+                <div class="time"><%= date(post.date, 'YYYY-MM-DD') %></div>
+            </div>
         </div>
      <%  lastYear = year;lastMonth = month; %>
     <% }) %>

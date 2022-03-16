@@ -10,7 +10,7 @@
                     <p><%- post.description%></p>
                 </div>
                 <div class="meta">
-                    <time class="published" datetime="2015-11-01"><%- post.date %></time>
+                    <%- partial("_partial/date",{postTime:post.date }) %>
                     <a href="#" class="author"><span class="name"><%- post.author%></span><img src="<%- url_for('images/avatar.jpg')%>" alt="" /></a>
                 </div>
             </header>

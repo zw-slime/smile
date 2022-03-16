@@ -6,6 +6,23 @@
         <header>
             <h2>Wei Blog</h2>
             <p>Lerna more about me <a href="https://github.com/zw-slime">My github </a></p>
+            <div class="statistics">
+                <div>
+                    <div>类别</div><div><%= site.categories.length%></div>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <div>文章</div><div><%= site.posts.length%></div>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <div>标签</div><div><a href="<%= url_for('tags') %>"><%= site.tags.length%></a></div>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <div>总访问量</div><div>xxx</div>
+                </div>
+            </div>
         </header>
     </section>
 

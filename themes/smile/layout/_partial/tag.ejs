@@ -1,13 +1,22 @@
 <div id="main" class='tag'>
 
     <h1><%- page.tag %></h1>
-    <ul>
-        <% page.posts.each(function(post){ %>
-            <li class="item">
-                <span class="time"><%= date(post.date, 'YYYY-MM-DD') %></span>
-                <a href="<%- url_for(post.path) %>"><%= post.title %></a>
-                <span class="desc"><%= post.description %></span>
-            </li>
-        <% }) %>
+
+    <ul class="posts">
+        <% if (page.posts.length){ %>
+            <% page.posts.each(function(post){ %>
+                <li>
+                    <article>
+                        <header>
+                            <h3><a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a></h3>
+                            <%- partial("_partial/date",{postTime:post.date }) %>
+                            <p><%= post.description %></p>
+                        </header>
+                        <a href="<%- url_for(post.path) %>" class="image"><img src="<%- url_for('/images/avatar.jpg') %>" alt="" /></a>
+                    </article>
+                </li>
+            <% }) %>
+        <% } %>
+
     </ul>
 </div>
