@@ -174,6 +174,16 @@
 				});
 			}
 
-			console.warn($window.hexo)
+	const gitalk = new Gitalk({
+		clientID: 'bdf9ffa2fc8dac8f90fd',
+		clientSecret: 'd34067e90a41aac20aa4532f87e8c0c94d192892',
+		repo: 'smile',
+		owner: 'zw-slime',
+		admin: ['zw-slime'],
+		id: location.pathname,      // Ensure uniqueness and length less than 50
+		distractionFreeMode: false  // Facebook-like distraction free mode
+	})
+
+	gitalk.render('gitalk-container')
 })(jQuery);
 
