@@ -1,12 +1,12 @@
 ---
-title: Hello World
+title: How to use Hexo to make myself blog
 author: zhangwei
-description: this is a test
+description: 如何用hexo制作自己的博客
 cover: images/pic01.jpg
 date: 2021-2-1
 categories: 
   - 其他
-tags: [tags1, tags2]
+tags: [hexo, blog]
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 <!-- more -->
