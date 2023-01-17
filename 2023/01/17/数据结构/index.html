@@ -1,0 +1,219 @@
+<head>
+    <title>WEI BLOG</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/smile/css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+    <h1><a href="/smile/">Wei Blog</a></h1>
+    <nav class="links">
+      <ul class="links-list">
+          
+              <li class="">
+                  <a href="/smile/categories/javascript/">
+                      javascript <span class="number">3</span>
+                  </a>
+              </li>
+          
+              <li class="">
+                  <a href="/smile/categories/%E5%90%8E%E7%AB%AF/">
+                      后端 <span class="number">1</span>
+                  </a>
+              </li>
+          
+              <li class="">
+                  <a href="/smile/categories/%E5%85%B6%E4%BB%96/">
+                      其他 <span class="number">4</span>
+                  </a>
+              </li>
+          
+      </ul>
+    </nav>
+
+    <nav class="main">
+        <ul>
+<!--            <li class="search">-->
+<!--                <a class="fa-search" href="#search">Search</a>-->
+<!--                <form id="search" method="get" action="#">-->
+<!--                    <input type="text" name="query" placeholder="Search" />-->
+<!--                </form>-->
+<!--            </li>-->
+            <li class="menu"><a href="/smile/archives" class="fa-archive">归档</a></li>
+            <li class="menu"><a href="/smile/tags" class="fa-tag">标签</a></li>
+            <li class="menu">
+                <a class="fa-search" href="#menu">Search</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Menu -->
+    <section id="menu">
+
+        <!-- Search -->
+        <section>
+            <div class="search" id="search">
+                <input type="text" name="query" placeholder="Search" />
+            </div>
+        </section>
+
+        <!-- Links -->
+        <section id="search-list">
+            <p>Please Search</p>
+        </section>
+
+
+    </section>
+</header>
+
+
+    <!-- Main -->
+    
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Post -->
+        <article class="post">
+            <header>
+                <div class="title">
+                    <h2><a href="#">数据结构</a></h2>
+                    <p>数据结构概览 总结</p>
+                </div>
+                <div class="meta">
+                    <time class="published" datetime="2023-01-16T16:00:00.000Z">2023-01-17</time>
+
+                    <a href="#" class="author"><span class="name">zhangwei</span><img src="/smile/images/avatar.jpg" alt="" /></a>
+                </div>
+            </header>
+            <span class="image featured"><img src="https://www.runoob.com/wp-content/uploads/2013/08/Javascript-DataType.png" alt="" /></span>
+            <p>js 数据结构 包括 null undefined string number boolean symbol bitInt</p>
+<span id="more"></span>
+<p>javascript是一种动态类型的动态语言，变量的值与任何类型都没有任何关联，可以随意分配和复制<br>javascript是一个弱类型的语言，它运行在操作中可以进行适当的隐私类型转换</p>
+<h1 id="基本类型-vs-引用类型"><a href="#基本类型-vs-引用类型" class="headerlink" title="基本类型 vs 引用类型"></a>基本类型 vs 引用类型</h1><p><strong>原始类型</strong> 不可变值 7种 null undefined string number boolean symbol bigint<br><strong>引用类型</strong> object array date function regex正则 Set Map</p>
+<blockquote>
+<p><strong>引用类型和基本类型的区别</strong><br>原始类型是按值存在栈内存中（先进后出 自动分配）大小固定 ；引用类型是把指针存在栈内存中，值存在堆内存中（优先级 开发者分配），指针指向的是内存堆中对应的实际值。<br>基本类型是按照值传递，互不影响；引用类型是按照引用传递（一改都改 互相影响）</p>
+</blockquote>
+<h2 id="null"><a href="#null" class="headerlink" title="null"></a>null</h2><p>只有一个值为null，表示空对象，一般给对象作为初始值 或者 大对象回收内存 时使用。没有包装对象。</p>
+<h2 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h2><p>只有一个值为undefined，表示未定义，没有任何值。没有包装对象。<br>以下情况默认值为undefined:</p>
+<ol>
+<li>变量声明了但是没有给初始值 </li>
+<li>函数没有传参数 </li>
+<li>函数return没有值 </li>
+<li>不存在的对象 <blockquote>
+<p><strong>typeof null === “object”</strong><br>原因 在js最初的实现里面 js的值是有一个表示类型的标签和实际数值表示<br>由于null 代表空指针 对于大多数平台来说是 0x00 null的类型标签是0 而 对象类型对应的标签也是0<br>因此 typeof null 就是object</p>
+</blockquote>
+<h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2>有两个值 true false<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2>双进度浮点数 超出范围会等于 Number.MAX_SAFE_INTEGER<h3 id="NaN-not-a-number-一种特殊的数值-表示不是数字"><a href="#NaN-not-a-number-一种特殊的数值-表示不是数字" class="headerlink" title="NaN not a number 一种特殊的数值 表示不是数字"></a>NaN not a number 一种特殊的数值 表示不是数字</h3>NaN!==NaN 它不等一自身 用isNaN判断 isNaN(NaN) === true <blockquote>
+<p>0.1+0.2 !== 0.3 原因<br>实际 0.1+0.2  = 0.30000000000000004<br>计算机是用二进制存储数据的，0.1 是一个循环数 0.2也是一个循环数。js是采用双精度浮点数，小数点最多能保留52位，会导致精度丢失。<br>浮点数存储：符号位（1）+指数位（11）+小数位（52）<br>符号为 正数为0 负数为1<br>指数为 是把数字转换为二进制后再转换位科学计数法得到的指数，再通过调整+1023 ,再转换为二进制得到<br>小数为 是把数字转换为二进制后再转换位科学计数法得到的指数 省略1得到<br>例如0.1的小数为1001 1001 的无限循环超过52位 要0舍1入 进度丢失<br>解决办法：判断是否在误差范围内(小于) Number.EPSION</p>
+</blockquote>
+<h2 id="BigInt"><a href="#BigInt" class="headerlink" title="BigInt"></a>BigInt</h2>表示任意大小的整数 大整数<br><code>const x = BigInt(Number.MAX_SAFE_INTEGER)</code><h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2>字符串类型<h2 id="Symbol类型"><a href="#Symbol类型" class="headerlink" title="Symbol类型"></a>Symbol类型</h2>唯一并且不可变的原始值 用对存储对象的key。目的是：用于创建唯一属性值 保证不会与其它代码中的key产生冲突。</li>
+</ol>
+<h1 id="类型检测"><a href="#类型检测" class="headerlink" title="类型检测"></a>类型检测</h1><h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>基本类型 typeof null = object 除了null是object以外其它的都是对的<br>引用类型 全是object 不能判断引用类型</p>
+<h2 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h2><p>用于判断对象的类型 本质是判断对象的原型链上是否存在该类型的原型<br>基本类型 不能判断 但是可以判断 string boolean number的包装类型<br>引用类型 可以判断没有修改原型的应用类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span> <span class="keyword">instanceof</span> <span class="title class_">Number</span> <span class="comment">// false</span></span><br><span class="line"><span class="string">&quot;a&quot;</span> <span class="keyword">instanceof</span> <span class="title class_">String</span> <span class="comment">// false</span></span><br><span class="line"><span class="literal">true</span> <span class="keyword">instanceof</span> <span class="title class_">Boolean</span> <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">(<span class="keyword">new</span> <span class="title class_">Number</span>(<span class="number">1</span>)) <span class="keyword">instanceof</span> <span class="title class_">Number</span> <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">[] <span class="keyword">instanceof</span> <span class="title class_">Array</span> <span class="comment">// true</span></span><br><span class="line"><span class="keyword">function</span>(<span class="params"></span>)&#123;&#125; <span class="keyword">instanceof</span> <span class="title class_">Function</span> <span class="comment">//true</span></span><br><span class="line">&#123;&#125; <span class="keyword">instanceof</span> <span class="title class_">Object</span> <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Fn</span>(<span class="params"></span>)&#123;&#125;</span><br><span class="line"><span class="title class_">Fn</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Array</span>()</span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> <span class="title class_">Fn</span>()</span><br><span class="line">f <span class="keyword">instanceof</span> <span class="title class_">Arrary</span> <span class="comment">// true</span></span><br><span class="line">f <span class="keyword">instanceof</span> <span class="title class_">Function</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h2 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h2><p>获取构造函数<br>基本类型 可以判断除了null undefined的基本类型 和 string number boolean的包装类型<br>引用类型 可以判断没有修改原型的应用类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">2</span>).<span class="property">constructor</span> === <span class="title class_">Number</span> <span class="comment">//true</span></span><br><span class="line">(<span class="keyword">new</span> <span class="title class_">Number</span>(<span class="number">2</span>)).<span class="property">constructor</span> === <span class="title class_">Number</span> <span class="comment">//true</span></span><br><span class="line">(<span class="string">&#x27;str&#x27;</span>).<span class="property">constructor</span> === <span class="title class_">String</span> <span class="comment">//true</span></span><br><span class="line">(<span class="literal">true</span>).<span class="property">constructor</span> === <span class="title class_">Boolean</span> <span class="comment">//true</span></span><br><span class="line">([]).<span class="property">constructor</span> === <span class="title class_">Array</span> <span class="comment">//true</span></span><br><span class="line">(<span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;).<span class="property">constructor</span> === <span class="title class_">Function</span> <span class="comment">//true</span></span><br><span class="line">(&#123;&#125;).<span class="property">constructor</span> === <span class="title class_">Object</span> <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Fn</span>(<span class="params"></span>)&#123;&#125;;</span><br><span class="line"><span class="title class_">Fn</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> <span class="title class_">Fn</span>();</span><br><span class="line">f.<span class="property">constructor</span>===<span class="title class_">Fn</span>  <span class="comment">// false</span></span><br><span class="line">f.<span class="property">constructor</span>===<span class="title class_">Array</span> <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">obj.<span class="property">__proto__</span> === <span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call()"></a>Object.prototype.toString.call()</h2><p>本质：利用Object原型链上的toString方法 遇到null undefined 就返回[object null] [object undefined]，如果不是就先转换为对象，基本类型被转化为它的包装对象 。转换后用取得该对象的 [Symbol.toStringTag]属性 和object拼装 就是得到值。可以手动改[Symbol.toStringTag]属性<br>排除手动改Symbol.toStringTag的情况 可以判断全部类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span></span><br><span class="line">a.<span class="title function_">call</span>(<span class="number">1</span>) <span class="comment">//&#x27;[object Number]&#x27;</span></span><br><span class="line">a.<span class="title function_">call</span>(<span class="keyword">new</span> <span class="title class_">Number</span>(<span class="number">1</span>))<span class="comment">//&#x27;[object Number]&#x27;</span></span><br><span class="line">a.<span class="title function_">call</span>(<span class="string">&#x27;a&#x27;</span>) <span class="comment">//&#x27;[object String]&#x27;</span></span><br><span class="line">a.<span class="title function_">call</span>(<span class="string">&#x27;boolean&#x27;</span>) <span class="comment">//&#x27;[object String]&#x27;</span></span><br><span class="line">a.<span class="title function_">call</span>(<span class="literal">true</span>) <span class="comment">// &#x27;[object Boolean]&#x27;</span></span><br><span class="line">a.<span class="title function_">call</span>([]) <span class="comment">// &#x27;[object Array]&#x27;</span></span><br><span class="line">a.<span class="title function_">call</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;) <span class="comment">//&#x27;[object Function]&#x27;</span></span><br><span class="line">a.<span class="title function_">call</span>(&#123;&#125;) <span class="comment">//&#x27;[object Object]&#x27;</span></span><br><span class="line">a.<span class="title function_">call</span>(<span class="literal">undefined</span>) <span class="comment">//&#x27;[object Undefined]&#x27;</span></span><br><span class="line">a.<span class="title function_">call</span>(<span class="literal">null</span>) <span class="comment">//&#x27;[object Null]&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Fn</span>(<span class="params"></span>)&#123;&#125;;</span><br><span class="line"><span class="title class_">Fn</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> <span class="title class_">Fn</span>();</span><br><span class="line">a.<span class="title function_">call</span>(f) <span class="comment">// &#x27;[object Object]&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o1 = &#123; [<span class="title class_">Symbol</span>.<span class="property">toStringTag</span>]: <span class="string">&quot;A&quot;</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> o2 = &#123; [<span class="title class_">Symbol</span>.<span class="property">toStringTag</span>]: <span class="literal">null</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>(o1); <span class="comment">// &#x27;[object A]&#x27;</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>(o2);      <span class="comment">// =&gt; &quot;[object Object]&quot; //只能是字符串 不是忽略</span></span><br></pre></td></tr></table></figure>
+<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><h2 id="类型转换规则"><a href="#类型转换规则" class="headerlink" title="类型转换规则"></a>类型转换规则</h2><p>string to number 空字符串转化为0 其它包含非数字的转化为NaN 数字字符串转为数字<br>string to boolean 空字符串为false 其它都为true</p>
+<p>number to string 就直接变为数字<br>number to boolean +0 -0 NaN为false 其它为true</p>
+<p>boolean to string true为”true” false 为”false”<br>boolean to number true 为1 false为0</p>
+<p>null to string “null”<br>null to boolean false<br>null to number 0</p>
+<p>undefined to string “undefined”<br>undefined to boolean false<br>undefined to number NaN</p>
+<p>Symbol to string ‘Symbol()’<br>Symbol to boolean true<br>Symbol to number false</p>
+<p>Array to string []变为”” 其它逗号连接起来<br>Array to boolean true<br>Array to number []为0 先转换为基本类型字符串 再判断有非数字为NaN</p>
+<p>Object to String 调用toString方法 “[object object]”<br>Object to boolean true<br>Object to number NaN</p>
+<h2 id="显式类型转换"><a href="#显式类型转换" class="headerlink" title="显式类型转换"></a>显式类型转换</h2><ul>
+<li>Number(a) 转换规则见上面</li>
+<li>parseInt(b) 不会把其他类型转化为数字 从头开始识别数字 能识别到几返回 识别不到就停止，不是数字开头的字符串判断为NaN</li>
+<li>Boolean() ! !!  null undefined NaN false ‘’ +0 -0为false 其他为ture</li>
+<li>a.toString() 转换为字符串</li>
+</ul>
+<h2 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h2><ol>
+<li>加号 </li>
+</ol>
+<ul>
+<li>一侧为字符串则将另一侧转换为字符串，再拼接起来；0+’1’ = ‘01’</li>
+<li>一侧为数字 另一侧为基本类型非字符串 则将另一侧转换为数字再先加 1+ false = 1</li>
+<li>一侧为数字 另一侧为非基本类型 则将另一侧转换为字符串 再拼接起来 0+{} = “0[Object Object]”</li>
+</ul>
+<ol start="2">
+<li>减号 乘号 除号  将非number转为number</li>
+<li>++a  +b -b 将非number转为number</li>
+<li>&lt; &gt; &gt;= &lt;= 转为boolean</li>
+<li>== 转为boolean</li>
+</ol>
+<ul>
+<li>如果两测是undefined null 则为true 如果两测是NaN 则为false</li>
+<li>类型相同直接比较</li>
+<li>类型不同先转换为相同类型比较</li>
+<li>如果一侧为number 另一侧为string 则把string转为number 再比较</li>
+<li>如果一侧为boolean 则先会转换为number再比较</li>
+<li>如果一侧为object 则先会转化为原始类型再比较<blockquote>
+<p>[] == ![] 为true {} == !{}为false 原因<br>[] == ![] ！优先级高 ![]为false  再比较 [] == false 一侧为boolean转户为数字 再比较[] == 0 []为引用类型，先转换为原始类型空字符串，再比较””=0，””转户为数字0 就等于比较 0 == 0 为true<br>简化 [] == ![] &gt;&gt; [] == false &gt;&gt; [] == 0 &gt;&gt; “” == 0 &gt;&gt; 0 == 0 =&gt;true<br>{} == !{} !{}优先级高 !{}为false 再比较{} == false 一侧为boolean转户为数字 再比较{} == 0 {}，先转换为原始类型NaN  就等于比较 NaN  == 0 为false<br>简化 {} == !{} &gt;&gt; {} == false &gt;&gt; {} == 0 &gt;&gt; NaN == 0 =&gt; false<br>核心是 []转为数字是0 {}转为数字是NaN </p>
+</blockquote>
+</li>
+</ul>
+<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><h2 id="包装对象-String-Object-Boolean"><a href="#包装对象-String-Object-Boolean" class="headerlink" title="包装对象 String Object Boolean"></a>包装对象 String Object Boolean</h2><p>利用方法new String() new Object() new Boolean() 可以将基本类型转化为对象 应用类型，这将装箱<br>将包装对象转换为基本类型 叫拆箱 会先调用valueOf 再调用toString()直到转换为原始类型 如果没有就报错typeError</p>
+<p>在调用基本类型调用String Object Boolean上的方法或属性时 js引擎会自动将原始值转化为包装对象实例 这样就可以调用包装对象的属性和方法。并且在使用后立即销毁实例。</p>
+<h2 id="对象的属性"><a href="#对象的属性" class="headerlink" title="对象的属性"></a>对象的属性</h2><h3 id="数据属性"><a href="#数据属性" class="headerlink" title="数据属性"></a>数据属性</h3><ol>
+<li>value 值</li>
+<li>writable 能否被赋值</li>
+<li>enumerable 能否被枚举 for in Object.keys</li>
+<li>configurable 能否被删除或者改变属性值<br>获取对象属性用getOwnPropertyDescriptor<br>设置对象属性用defineProperty<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a =&#123;<span class="attr">a</span>:<span class="number">1</span>&#125;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">getOwnPropertyDescriptor</span>(a,<span class="string">&#x27;a&#x27;</span>) <span class="comment">//&#123;configurable: true,enumerable: true,value: 1,writable: true&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(a,<span class="string">&#x27;a&#x27;</span>,&#123;<span class="attr">value</span>:<span class="number">5</span>,<span class="attr">configurable</span>: <span class="literal">false</span>,<span class="attr">enumerable</span>: <span class="literal">false</span>,<span class="attr">writable</span>: <span class="literal">false</span>&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="访问器属性"><a href="#访问器属性" class="headerlink" title="访问器属性"></a>访问器属性</h3></li>
+<li>Getter 取值</li>
+<li>setter 赋值</li>
+<li>enumerable 能否被枚举 for in  Object.keys</li>
+<li>configurable 能否被删除或者改变属性值<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> o = &#123;</span><br><span class="line">  <span class="attr">b</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="keyword">get</span> <span class="title function_">a</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">b</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">set</span> <span class="title function_">a</span>(<span class="params">i</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">b</span> = i;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(o.<span class="property">a</span>); <span class="comment">// 1</span></span><br><span class="line">o.<span class="property">a</span> = <span class="number">5</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(o.<span class="property">a</span>); <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = &#123; <span class="attr">b</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(o, <span class="string">&#x27;a&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">set</span>: <span class="keyword">function</span> (<span class="params">value</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">b</span> = value + <span class="number">100</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">get</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">b</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">warn</span>(o.<span class="property">a</span>); <span class="comment">// 6</span></span><br><span class="line">o.<span class="property">a</span> = <span class="number">6</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">warn</span>(o.<span class="property">a</span>); <span class="comment">// 106</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+
+            <footer>
+                <ul class="stats">
+                    <li><a href="#">  <a class="category-link" href="/smile/categories/javascript/">javascript</a></a></li>
+                    <li>
+                        
+                            <a class="tag-li-link" href="/smile/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a>
+                        
+                    </li>
+                    <li> <span id="busuanzi_container_page_pv"><i class="icon solid fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></li>
+                    <!--            <li><a href="#" class="icon solid fa-heart">28</a></li>-->
+                    <!--            <li><a href="#" class="icon solid fa-comment">128</a></li>-->
+                </ul>
+            </footer>
+
+            <div id="gitalk-container"></div>
+        </article>
+        <!-- Footer -->
+        <section id="footer">
+            <p class="copyright">&copy; Wei Blog: <a target="_blank" rel="noopener" href="https://github.com/zw-slime">My github </a></p>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+<!-- Scripts -->
+<script src="/smile/js/jquery.min.js"></script>
+<script src="/smile/js/browser.min.js"></script>
+<script src="/smile/js/breakpoints.min.js"></script>
+<script src="/smile/js/util.js"></script>
+<script src="/smile/js/main.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</body>
